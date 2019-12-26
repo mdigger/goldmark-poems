@@ -9,14 +9,12 @@ import (
 )
 
 func Example() {
-	var source = []byte(`
-# Sample
+	var source = []byte(`# Sample
 
     Alas for man! day after day may rise,
       Night may shade his thankless head,
     He sees no God in the bright, morning skies
-      He sings no praises from his guarded bed.
-`)
+      He sings no praises from his guarded bed.`)
 	md := goldmark.New(
 		goldmark.WithExtensions(poems.Extension))
 	err := md.Convert(source, os.Stdout)
@@ -25,10 +23,8 @@ func Example() {
 	}
 	// Output:
 	// <h1>Sample</h1>
-	// <div class="poem">
-	// Alas for man! day after day may rise,<br>
+	// <div class="poem">Alas for man! day after day may rise,<br>
 	// &nbsp;&nbsp;Night may shade his thankless head,<br>
 	// He sees no God in the bright, morning skies<br>
-	// &nbsp;&nbsp;He sings no praises from his guarded bed.
-	// </div>
+	// &nbsp;&nbsp;He sings no praises from his guarded bed.</div>
 }

@@ -11,7 +11,7 @@ type render struct {
 }
 
 var defaulRenderer = &render{
-	start: "<div class=\"poem\">\n",
+	start: "<div class=\"poem\">",
 	end:   "</div>\n",
 }
 
