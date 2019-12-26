@@ -1,5 +1,7 @@
 # goldmark-poems
 
+[![GoDoc](https://godoc.org/github.com/mdigger/goldmark-poems?status.svg)](https://godoc.org/github.com/mdigger/goldmark-poems)
+
 This [goldmark](https://github.com/yuin/goldmark) extension adds support for parse code blocks as poems.
 
 ```go
