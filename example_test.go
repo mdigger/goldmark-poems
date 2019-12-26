@@ -9,12 +9,11 @@ import (
 )
 
 func Example() {
-	var source = []byte(`# Sample
-
-    Alas for man! day after day may rise,
-      Night may shade his thankless head,
-    He sees no God in the bright, morning skies
-      He sings no praises from his guarded bed.`)
+	var source = []byte("# Sample\n\n" +
+		"\tAlas for man! day after day may rise,\n" +
+		"\t  Night may shade his thankless head,\n" +
+		"\tHe sees no God in the bright, morning skies\n" +
+		"\t  He sings no praises from his guarded bed.")
 	md := goldmark.New(
 		goldmark.WithExtensions(poems.Extension))
 	err := md.Convert(source, os.Stdout)
