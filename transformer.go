@@ -30,7 +30,7 @@ func (*transformer) Transform(node *ast.Document, reader text.Reader, pc parser.
 			if textNode.SoftLineBreak() && textNode.NextSibling() != nil {
 				textNode.SetHardLineBreak(true)
 			}
-			text := textNode.Text(source)
+			text := textNode.Value(source)
 			if spaces := util.TrimLeftSpaceLength(text); spaces > 0 {
 				indent := ast.NewString(bytes.Repeat(nbsp, spaces))
 				indent.SetCode(true)
